@@ -1,0 +1,62 @@
+{% extends "selfinfo.html" %}
+{% block banner1%}
+    <div class="am-u-sm-12 am-u-md-12 am-u-md-pull-12">
+          <form class="am-form am-form-horizontal" action="/addgoods" method=post>
+              <div class="am-form-group">
+              <label for="goods-name" class="am-u-sm-3 am-form-label">用户ID / ID</label>
+              <div class="am-u-sm-9">
+                {{ user.userid }}
+
+              </div>
+            </div>
+            <div class="am-form-group">
+              <label for="goods-name" class="am-u-sm-3 am-form-label">用户名 / Name</label>
+              <div class="am-u-sm-9">
+                {{ user.username }}
+
+              </div>
+            </div>
+
+            <div class="am-form-group">
+              <label for="goodsimage" class="am-u-sm-3 am-form-label">用户密码 / Image</label>
+              <div class="am-u-sm-9">
+                {{ user.password }}
+
+              </div>
+            </div>
+
+            <div class="am-form-group">
+              <label for="goodsCla" class="am-u-sm-3 am-form-label">用户邮箱 / Class</label>
+              <div class="am-u-sm-9">
+                {{ user.email }}
+              </div>
+            </div>
+
+            <div class="am-form-group">
+              <label for="goodPri" class="am-u-sm-3 am-form-label">用户积分</label>
+              <div class="am-u-sm-9">
+                {{ user.integration }}
+              </div>
+            </div>
+
+            <div class="am-form-group">
+              <label for="CTI" class="am-u-sm-3 am-form-label">上线ID </label>
+              <div class="am-u-sm-9">
+                {{ user.proxyId }}
+              </div>
+            </div>
+
+
+            <div class="am-form-group">
+              <div class="am-u-sm-9 am-u-sm-push-3">
+                  <button type="button" class="am-btn am-btn-primary"><a href="/updeteUserinfo?id={{ user.userid }}">修改信息</a></button>
+              </div>
+            </div>
+              <div class="am-form-group">
+              <div class="am-u-sm-9 am-u-sm-push-3">
+                  <button type="button" class="am-btn am-btn-primary"><a href="/applyproxy?id={{ user.userid }}">申请成为代理</a></button>
+              </div>
+            </div>
+          </form>
+        </div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "selfinfo.html" %}
+{% block banner1%}
+    <div class="am-u-sm-12 am-u-md-12 am-u-md-pull-12">
+          <form class="am-form am-form-horizontal" action="/applyproxy" method=post>
+
+            <div class="am-form-group">
+              <label for="goods-name" class="am-u-sm-3 am-form-label">用户名 / Name</label>
+              <div class="am-u-sm-9">
+               <input name="username" type="text" />
+
+              </div>
+            </div>
+
+            <div class="am-form-group">
+              <label for="goodsimage" class="am-u-sm-3 am-form-label">用户邮箱 / Image</label>
+              <div class="am-u-sm-9">
+                 <input name="email" type="text" />
+
+              </div>
+            </div>
+
+
+            <div class="am-form-group">
+              <label for="CTI" class="am-u-sm-3 am-form-label">电话号码: </label>
+              <div class="am-u-sm-9">
+                <input name="phone" type="number" />
+              </div>
+            </div>
+
+
+            <div class="am-form-group">
+              <div class="am-u-sm-9 am-u-sm-push-3">
+                  <button type="submit" class="am-btn am-btn-primary">提交申请</button>
+              </div>
+            </div>
+          </form>
+        </div>
+{% endblock %}

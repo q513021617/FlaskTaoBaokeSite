@@ -1,0 +1,33 @@
+{% extends "selfinfo.html" %}
+{% block banner1%}
+    <div class="am-u-sm-12 am-u-md-12 am-u-md-pull-12">
+          <form class="am-form am-form-horizontal" action="" method=post>
+
+            <div class="am-form-group">
+              <label for="goods-name" class="am-u-sm-3 am-form-label">目前推广单 数 / Name</label>
+              <div class="am-u-sm-9">
+               {{ countB }}
+
+              </div>
+            </div>
+
+            <div class="am-form-group">
+              <label for="goodsimage" class="am-u-sm-3 am-form-label">目前下线人数 / Image</label>
+              <div class="am-u-sm-9">
+                  <a href="showVIP.html?">{{ countP }}</a>
+
+              </div>
+            </div>
+
+
+            <div class="am-form-group">
+              <label for="CTI" class="am-u-sm-3 am-form-label">推广链接 </label>
+              <div class="am-u-sm-9">
+                <input name="phone" type="number"  value="http://www.xueshengjuan.cn?proxyid={{ proxyId }}"/>
+              </div>
+            </div>
+
+
+          </form>
+        </div>
+{% endblock %}
