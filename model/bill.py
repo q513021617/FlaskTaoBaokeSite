@@ -1,18 +1,19 @@
-# -*- coding:utf-8 -*-
+# -*-coding:utf-8-*-
 from werkzeug.security import generate_password_hash, check_password_hash
 from sqlalchemy import Column, Integer, String,BigInteger,Float
 from model.tools import Base, DBSession, engine
 from sqlalchemy import func
-import mysql.connector
+import pymysql
+# import mysql.connector
 import xlrd
 
 
 class Bill(Base):
     __tablename__ = 'bill'
-    biilID = Column(BigInteger, primary_key=True)
+    biilID = Column(Integer, primary_key=True)
     goodsid = Column(String(255), unique=True, index=True)
-    payment = Column(Float(255), unique=False, index=True)
-    orderNumber = Column(BigInteger, unique=True, index=True)
+    payment = Column(Float, unique=False, index=True)
+    orderNumber = Column(Integer, unique=True, index=True)
     orderStatus = Column(String(255), unique=False, index=True)
 
     def __str__(self):
@@ -39,7 +40,7 @@ def addBill():
     # 创建新User对象:
     book = xlrd.open_workbook("./upload/bill.xls")
     sheet = book.sheet_by_name("Page1")
-    database = mysql.connector.connect(host="localhost", user="root", passwd="325602", db="caiweiwang")
+    database = pymysql.connect(host="localhost", user="root", passwd="root", db="caiweiwang")
     cursor = database.cursor()
 
     # 创建插入SQL语句

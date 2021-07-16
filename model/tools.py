@@ -9,7 +9,7 @@ import os
 Base = declarative_base()
 
 # 初始化数据库连接:
-engine = create_engine('mysql+pymysql://root:325602@localhost:3306/caiweiwang?charset=utf8')
+engine = create_engine('mysql+pymysql://root:root@localhost:3306/caiweiwang?charset=utf8')
 # 创建DBSession类型:
 
 DBSession = scoped_session(sessionmaker(bind=engine))

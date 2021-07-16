@@ -5,6 +5,8 @@ from .tools import Base, DBSession, engine
 from model.bill import queryBillbynumber
 from model.income import queryincomeByNumber, addincome
 from sqlalchemy import func
+
+
 class User(Base):
     __tablename__ = 'user'
     userid = Column(BigInteger, primary_key=True)
@@ -40,6 +42,13 @@ def queryUserByname(username):
     user = DBSession.query(User).filter(User.username == username).first()
     # 关闭Session:
     return user
+
+
+def login(username,password):
+    user = queryUserByname(username)
+    if(user):
+        return user.username == password
+    return False
 
 
 def adduser1(username, password, email):

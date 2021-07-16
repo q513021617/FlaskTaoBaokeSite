@@ -1,143 +1,66 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-	<meta charset="utf-8">
-	<meta name="description" content="采微网是一个免费分享优惠券的地方">
-	<title>抢劵直播--采微网choin</title>
-	<link rel="stylesheet" href="/static/css/bootstrap.css">
-	<link rel="stylesheet" href="/static/css/style.css">
-	<script type="text/javascript" src="/static/js/jquery-3.1.1.js"></script>
-	<script type="text/javascript" src="/static/js/xueshengjuan.js"></script>
-	<script type="text/javascript" src="/static/js/bootstrap.js"></script>
-    <script type="text/javascript" src="/static/js/util.js"></script>
+{% include 'common/header.html' without context %}
+
+{% include 'common/nav.html' without context %}
 
 
-</head>
-<body>
-	<!--教程中的bootstrap版本不同,样式调用代码也不一样-->
-	<div class="header">
-		<div class="container"><!--居中显示-->
-			<div class="row"><!--行样式-->
-			
-				<div class="col-xs-6 col-md-4"><!--大小控制-->
-					<a href="/" title="回到首页">
-						<img id="logo" src="/static/images/logo.jpg" alt="采薇网">
-					</a>
-				</div>
+<div id="banner" class="container">
+    <img src="/static/images/banner.png" alt="">
 
-				<div class="col-xs-6 col-md-4">
-					<div class="input-group" id="search">
-						<form action="#">
-							<input type="text" class="form-control" placeholder="搜索优惠券...">
-							<span class="input-group-btn">
-							<button class="btn btn-default" type="button"></button>
-							</span>
-						</form>
-						
-					</div>
-				</div>
-
-				<div class="showChar col-xs-6 col-md-4">
-					<div class="showChar-div showChar-3 right">
-						<i></i>
-						<span>验货保障</span>
-					</div>
-					<div class="showChar-div showChar-2">
-						<i></i>
-						<span>买手砍价</span>
-					</div>
-					<div class="showChar-div showChar-1">
-						<i></i>
-						<span>9:00开抢</span>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
+</div>
 
 
-	<nav id="navigation" class="navbar navbar-default">
-		<div class="container-fluid">
-			<div class="navbar-headefile:/./index.html">
-				<ul class="nav nav-tabs" id="IT">
-					<li role="presentation" ><a href="/">首页</a></li>
-					<li role="presentation" class="active"><a  href="/juanlive">抢劵直播</a></li>
-					<li role="presentation"><a href="/charts">抢购排行榜</a></li>
-					<li role="presentation"><a href="/jiu">9块9包邮</a></li>
-                    <li role="presentation"><a href="/selfinfo">个人中心</a></li>
-				</ul>
-			</div>
-		</div>
-
-	</nav>
-
-
-
-
-	<div id="banner" class="container">
-        <img src="/static/images/banner.png" alt="">
-
-	</div>
-
-
-
-
-	
-
-
-	<div id="Mcontent">
-        <div class="cat-wrap main-container">
-                    <div class="cat-list clearfix">
-                <span class="cat-lit-title">商品分类</span>
-                <ul class="clearfix" _hover-ignore="1">
-                    <li class="active">
-                        <a href="#" class="cnzzCounter" data-cnzz-type="51" data-cnzz="100">全部优惠<b>(3076)</b></a>
-                    </li>
-                                            <li>
-                            <a href="#" class="cnzzCounter" data-cnzz-type="51" data-cnzz="1">服装<b>(657)</b></a>
-                        </li>
-                                            <li>
-                            <a href="#" class="cnzzCounter" data-cnzz-type="51" data-cnzz="2">母婴<b>(363)</b></a>
-                        </li>
-                                            <li>
-                            <a href="#" class="cnzzCounter" data-cnzz-type="51" data-cnzz="3">化妆品<b>(219)</b></a>
-                        </li>
-                                            <li>
-                            <a href="#" class="cnzzCounter" data-cnzz-type="51" data-cnzz="4">居家<b>(733)</b></a>
-                        </li>
-                                            <li>
-                            <a href="#" class="cnzzCounter" data-cnzz-type="51" data-cnzz="5">鞋包配饰<b>(462)</b></a>
-                        </li>
-                                            <li>
-                            <a href="#" class="cnzzCounter" data-cnzz-type="51" data-cnzz="6">美食<b>(236)</b></a>
-                        </li>
-                                            <li>
-                            <a href="#" class="cnzzCounter" data-cnzz-type="51" data-cnzz="7">文体车品<b>(209)</b></a>
-                        </li>
-                                            <li>
-                            <a href="#" class="cnzzCounter" data-cnzz-type="51" data-cnzz="8">数码家电<b>(197)</b></a>
-                        </li>
-                                    </ul>
-            </div>
-                <div class="cat-list sale-type clearfix">
+<div id="Mcontent">
+    <div class="cat-wrap main-container">
+        <div class="cat-list clearfix">
+            <span class="cat-lit-title">商品分类</span>
+            <ul class="clearfix" _hover-ignore="1">
+                <li class="active">
+                    <a href="#" class="cnzzCounter" data-cnzz-type="51" data-cnzz="100">全部优惠<b>(3076)</b></a>
+                </li>
+                <li>
+                    <a href="#" class="cnzzCounter" data-cnzz-type="51" data-cnzz="1">服装<b>(657)</b></a>
+                </li>
+                <li>
+                    <a href="#" class="cnzzCounter" data-cnzz-type="51" data-cnzz="2">母婴<b>(363)</b></a>
+                </li>
+                <li>
+                    <a href="#" class="cnzzCounter" data-cnzz-type="51" data-cnzz="3">化妆品<b>(219)</b></a>
+                </li>
+                <li>
+                    <a href="#" class="cnzzCounter" data-cnzz-type="51" data-cnzz="4">居家<b>(733)</b></a>
+                </li>
+                <li>
+                    <a href="#" class="cnzzCounter" data-cnzz-type="51" data-cnzz="5">鞋包配饰<b>(462)</b></a>
+                </li>
+                <li>
+                    <a href="#" class="cnzzCounter" data-cnzz-type="51" data-cnzz="6">美食<b>(236)</b></a>
+                </li>
+                <li>
+                    <a href="#" class="cnzzCounter" data-cnzz-type="51" data-cnzz="7">文体车品<b>(209)</b></a>
+                </li>
+                <li>
+                    <a href="#" class="cnzzCounter" data-cnzz-type="51" data-cnzz="8">数码家电<b>(197)</b></a>
+                </li>
+            </ul>
+        </div>
+        <div class="cat-list sale-type clearfix">
             <span class="cat-lit-title">促销类型</span>
             <ul class="clearfix">
                 <li class="">
-                                        <a href="#"><i></i>优选</a>
+                    <a href="#"><i></i>优选</a>
                 </li>
                 <li class="">
-                                        <a href="#"><i></i>天猫</a>
+                    <a href="#"><i></i>天猫</a>
                 </li>
             </ul>
         </div>
     </div>
-            <div class="tag-wrap main-container clearfix cat-wrap">
+    <div class="tag-wrap main-container clearfix cat-wrap">
         <div class="fixed-wrap fl">
-                        <a href="">销量从高到低</a>
-                        <a href="">最新</a>
-                        <a href="">领券量</a>
-                        <a href="">价格</a>
+            <a href="">销量从高到低</a>
+            <a href="">最新</a>
+            <a href="">领券量</a>
+            <a href="">价格</a>
 
             <div class="sort-price-area fl">
                 <form action="#" onsubmit="">
@@ -152,266 +75,282 @@
                         <span class="pagebtn disabled pre-page">
                     </span>
             <span class="page-num"><b>1</b>/32</span>
-                        <span class="pagebtn  next-page">
+            <span class="pagebtn  next-page">
                             <a href=""></a>
                     </span>
         </div>
 
 
     </div>
-        <div class="container">
+    <div class="container">
 
-            <div class="row">
+        <div class="row">
 
-					<div class="col-xs-6 col-md-3" id="good">
-						<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3D%2BvZy8GUmzZgcQipKwQzePOeEDrYVVa64LKpWJ%2Bin0XJRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWKZaLjq6blELe11Yi%2BCfneyqkq%2Bft%2FVZ4ZntdQAOesJIAYgHziGuDpaIYULNg46oBA%3D
+            <div class="col-xs-6 col-md-3" id="good">
+                <a href="https://s.click.taobao.com/t?e=m%3D2%26s%3D%2BvZy8GUmzZgcQipKwQzePOeEDrYVVa64LKpWJ%2Bin0XJRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWKZaLjq6blELe11Yi%2BCfneyqkq%2Bft%2FVZ4ZntdQAOesJIAYgHziGuDpaIYULNg46oBA%3D
 " class="thumbnail">
-							<img src="http://img04.taobaocdn.com/bao/uploaded/i4/1125105440/TB23V8PgY8kpuFjy0FcXXaUhpXa_!!1125105440.jpg
-"  width="290px" height="290px" alt="商品">
-						</a>
-						
-						<div class="btn-group" role="group" >
-							<a href="https://uland.taobao.com/coupon/edetail?e=uv%2B3B6H%2FZYEN%2BoQUE6FNzHxGqY6MdkGY6eiUI9ADT0HXr%2FLVg40ITzPKR4DOvb%2BMz48Slf6wwbfWRUUrHymVQBpywujSvOp2nUIklpPPqYLWWcBjjBVer8j3tOD5nyRS0PC98z5Qq0OmKa1zjLJ9fYpaYtL%2BHBpE&pid=mm_121565592_20930862_70828939&af=1
-"><button type="button" class="btn btn-danger btn-lg">点我抢券</button></a>
+                    <img src="http://img04.taobaocdn.com/bao/uploaded/i4/1125105440/TB23V8PgY8kpuFjy0FcXXaUhpXa_!!1125105440.jpg
+" width="290px" height="290px" alt="商品">
+                </a>
 
-							<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3D%2BvZy8GUmzZgcQipKwQzePOeEDrYVVa64LKpWJ%2Bin0XJRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWKZaLjq6blELe11Yi%2BCfneyqkq%2Bft%2FVZ4ZntdQAOesJIAYgHziGuDpaIYULNg46oBA%3D
-"><button type="button" class="btn btn-warning btn-lg">去淘宝购买</button></a>
-						</div>
-					</div>
+                <div class="btn-group" role="group">
+                    <a href="https://uland.taobao.com/coupon/edetail?e=uv%2B3B6H%2FZYEN%2BoQUE6FNzHxGqY6MdkGY6eiUI9ADT0HXr%2FLVg40ITzPKR4DOvb%2BMz48Slf6wwbfWRUUrHymVQBpywujSvOp2nUIklpPPqYLWWcBjjBVer8j3tOD5nyRS0PC98z5Qq0OmKa1zjLJ9fYpaYtL%2BHBpE&pid=mm_121565592_20930862_70828939&af=1
+">
+                        <button type="button" class="btn btn-danger btn-lg">点我抢券</button>
+                    </a>
 
-					<div class="col-xs-6 col-md-3" id="good">
-						<a href="#" class="thumbnail">
-							<img src="http://img04.taobaocdn.com/bao/uploaded/i4/1125105440/TB23V8PgY8kpuFjy0FcXXaUhpXa_!!1125105440.jpg
-"  width="290px" height="290px" alt="商品">
-						</a>
-						
-						<div class="btn-group" role="group" >
-							<a href="https://uland.taobao.com/coupon/edetail?e=uv%2B3B6H%2FZYEN%2BoQUE6FNzHxGqY6MdkGY6eiUI9ADT0HXr%2FLVg40ITzPKR4DOvb%2BMz48Slf6wwbfWRUUrHymVQBpywujSvOp2nUIklpPPqYLWWcBjjBVer8j3tOD5nyRS0PC98z5Qq0OmKa1zjLJ9fYpaYtL%2BHBpE&pid=mm_121565592_20930862_70828939&af=1
-"><button type="button" class="btn btn-danger btn-lg">点我抢券</button></a>
+                    <a href="https://s.click.taobao.com/t?e=m%3D2%26s%3D%2BvZy8GUmzZgcQipKwQzePOeEDrYVVa64LKpWJ%2Bin0XJRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWKZaLjq6blELe11Yi%2BCfneyqkq%2Bft%2FVZ4ZntdQAOesJIAYgHziGuDpaIYULNg46oBA%3D
+">
+                        <button type="button" class="btn btn-warning btn-lg">去淘宝购买</button>
+                    </a>
+                </div>
+            </div>
 
-							<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3D%2BvZy8GUmzZgcQipKwQzePOeEDrYVVa64LKpWJ%2Bin0XJRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWKZaLjq6blELe11Yi%2BCfneyqkq%2Bft%2FVZ4ZntdQAOesJIAYgHziGuDpaIYULNg46oBA%3D
-"><button type="button" class="btn btn-warning btn-lg">去淘宝购买</button></a>
-						</div>
-					</div>
+            <div class="col-xs-6 col-md-3" id="good">
+                <a href="#" class="thumbnail">
+                    <img src="http://img04.taobaocdn.com/bao/uploaded/i4/1125105440/TB23V8PgY8kpuFjy0FcXXaUhpXa_!!1125105440.jpg
+" width="290px" height="290px" alt="商品">
+                </a>
+
+                <div class="btn-group" role="group">
+                    <a href="https://uland.taobao.com/coupon/edetail?e=uv%2B3B6H%2FZYEN%2BoQUE6FNzHxGqY6MdkGY6eiUI9ADT0HXr%2FLVg40ITzPKR4DOvb%2BMz48Slf6wwbfWRUUrHymVQBpywujSvOp2nUIklpPPqYLWWcBjjBVer8j3tOD5nyRS0PC98z5Qq0OmKa1zjLJ9fYpaYtL%2BHBpE&pid=mm_121565592_20930862_70828939&af=1
+">
+                        <button type="button" class="btn btn-danger btn-lg">点我抢券</button>
+                    </a>
+
+                    <a href="https://s.click.taobao.com/t?e=m%3D2%26s%3D%2BvZy8GUmzZgcQipKwQzePOeEDrYVVa64LKpWJ%2Bin0XJRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWKZaLjq6blELe11Yi%2BCfneyqkq%2Bft%2FVZ4ZntdQAOesJIAYgHziGuDpaIYULNg46oBA%3D
+">
+                        <button type="button" class="btn btn-warning btn-lg">去淘宝购买</button>
+                    </a>
+                </div>
+            </div>
 
 
-
-
-					<div class="col-xs-6 col-md-3" id="good">
-						<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3Dz6KBsD9RU0wcQipKwQzePOeEDrYVVa64LKpWJ%2Bin0XJRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWJZFbeIpYolmY8etiVrJniaD4sSHHSJqFNaZXKvfA2sz%2Fk0%2BFxf%2BzDzxg5p7bh%2BFbQ%3D
+            <div class="col-xs-6 col-md-3" id="good">
+                <a href="https://s.click.taobao.com/t?e=m%3D2%26s%3Dz6KBsD9RU0wcQipKwQzePOeEDrYVVa64LKpWJ%2Bin0XJRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWJZFbeIpYolmY8etiVrJniaD4sSHHSJqFNaZXKvfA2sz%2Fk0%2BFxf%2BzDzxg5p7bh%2BFbQ%3D
 " class="thumbnail">
-							<img src="http://img01.taobaocdn.com/bao/uploaded/i1/461923231/TB2isuqebtlpuFjSspoXXbcDpXa_!!461923231.jpg
+                    <img src="http://img01.taobaocdn.com/bao/uploaded/i1/461923231/TB2isuqebtlpuFjSspoXXbcDpXa_!!461923231.jpg
 
-"  width="290px" height="290px" alt="商品">
-						</a>
-						
-						<div class="btn-group" role="group" >
-							<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3Dz6KBsD9RU0wcQipKwQzePOeEDrYVVa64LKpWJ%2Bin0XJRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWJZFbeIpYolmY8etiVrJniaD4sSHHSJqFNaZXKvfA2sz%2Fk0%2BFxf%2BzDzxg5p7bh%2BFbQ%3D
+" width="290px" height="290px" alt="商品">
+                </a>
 
-"><button type="button" class="btn btn-danger btn-lg">点我抢券</button></a>
+                <div class="btn-group" role="group">
+                    <a href="https://s.click.taobao.com/t?e=m%3D2%26s%3Dz6KBsD9RU0wcQipKwQzePOeEDrYVVa64LKpWJ%2Bin0XJRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWJZFbeIpYolmY8etiVrJniaD4sSHHSJqFNaZXKvfA2sz%2Fk0%2BFxf%2BzDzxg5p7bh%2BFbQ%3D
 
-							<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3Dz6KBsD9RU0wcQipKwQzePOeEDrYVVa64LKpWJ%2Bin0XJRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWJZFbeIpYolmY8etiVrJniaD4sSHHSJqFNaZXKvfA2sz%2Fk0%2BFxf%2BzDzxg5p7bh%2BFbQ%3D
+">
+                        <button type="button" class="btn btn-danger btn-lg">点我抢券</button>
+                    </a>
 
-"><button type="button" class="btn btn-warning btn-lg">去淘宝购买</button></a>
-						</div>
-					</div>
+                    <a href="https://s.click.taobao.com/t?e=m%3D2%26s%3Dz6KBsD9RU0wcQipKwQzePOeEDrYVVa64LKpWJ%2Bin0XJRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWJZFbeIpYolmY8etiVrJniaD4sSHHSJqFNaZXKvfA2sz%2Fk0%2BFxf%2BzDzxg5p7bh%2BFbQ%3D
 
-
-					<div class="col-xs-6 col-md-3" id="good">
-						<a href="#" class="thumbnail">
-							<img src="http://img04.taobaocdn.com/bao/uploaded/i4/1125105440/TB23V8PgY8kpuFjy0FcXXaUhpXa_!!1125105440.jpg
-"  width="290px" height="290px" alt="商品">
-						</a>
-						
-						<div class="btn-group" role="group" >
-							<a href="https://uland.taobao.com/coupon/edetail?e=uv%2B3B6H%2FZYEN%2BoQUE6FNzHxGqY6MdkGY6eiUI9ADT0HXr%2FLVg40ITzPKR4DOvb%2BMz48Slf6wwbfWRUUrHymVQBpywujSvOp2nUIklpPPqYLWWcBjjBVer8j3tOD5nyRS0PC98z5Qq0OmKa1zjLJ9fYpaYtL%2BHBpE&pid=mm_121565592_20930862_70828939&af=1
-"><button type="button" class="btn btn-danger btn-lg">点我抢券</button></a>
-
-							<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3D%2BvZy8GUmzZgcQipKwQzePOeEDrYVVa64LKpWJ%2Bin0XJRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWKZaLjq6blELe11Yi%2BCfneyqkq%2Bft%2FVZ4ZntdQAOesJIAYgHziGuDpaIYULNg46oBA%3D
-"><button type="button" class="btn btn-warning btn-lg">去淘宝购买</button></a>
-						</div>
-					</div>
-
-					<div class="col-xs-6 col-md-3" id="good">
-						<a href="#" class="thumbnail">
-							<img src="http://img03.taobaocdn.com/bao/uploaded/i3/TB11a81QXXXXXaIXpXXXXXXXXXX_!!0-item_pic.jpg
-
-"  width="290px" height="290px" alt="商品">
-						</a>
-						
-						<div class="btn-group" role="group" >
-							<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DTeWu4D819EQcQipKwQzePOeEDrYVVa64K7Vc7tFgwiFRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWLyv%2BERp3Ky9EXHY%2B8is0mQ%2FdY5zlSILCNzlrb7LJWYhCO%2FxcGdlq%2F0IYULNg46oBA%3D
-
-"><button type="button" class="btn btn-danger btn-lg">点我抢券</button></a>
-
-							<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DTeWu4D819EQcQipKwQzePOeEDrYVVa64K7Vc7tFgwiFRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWLyv%2BERp3Ky9EXHY%2B8is0mQ%2FdY5zlSILCNzlrb7LJWYhCO%2FxcGdlq%2F0IYULNg46oBA%3D
-
-"><button type="button" class="btn btn-warning btn-lg">去淘宝购买</button></a>
-						</div>
-					</div>
-<div class="col-xs-6 col-md-3" id="good">
-						<a href="#" class="thumbnail">
-							<img src="http://img01.taobaocdn.com/bao/uploaded/i1/TB1eo4aQXXXXXbDXVXXXXXXXXXX_!!0-item_pic.jpg
-"  width="290px" height="290px" alt="商品">
-						</a>
-						
-						<div class="btn-group" role="group" >
-							<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3Dm891Z5j5EWQcQipKwQzePOeEDrYVVa64K7Vc7tFgwiFRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWIgfv06HKMpP17Fd8nRrQKG%2FdY5zlSILCNbbZwINKJRmG6%2F%2BEFtFKDkIYULNg46oBA%3D
-"><button type="button" class="btn btn-danger btn-lg">点我抢券</button></a>
-
-							<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3Dm891Z5j5EWQcQipKwQzePOeEDrYVVa64K7Vc7tFgwiFRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWIgfv06HKMpP17Fd8nRrQKG%2FdY5zlSILCNbbZwINKJRmG6%2F%2BEFtFKDkIYULNg46oBA%3D
-"><button type="button" class="btn btn-warning btn-lg">去淘宝购买</button></a>
-						</div>
-					</div>
-
-					<div class="col-xs-6 col-md-3" id="good">
-						<a href="#" class="thumbnail">
-							<img src="http://img03.taobaocdn.com/bao/uploaded/i3/3170309843/TB2qAALhwJlpuFjSspjXXcT.pXa_!!3170309843.jpg
-"  width="290px" height="290px" alt="商品">
-						</a>
-						
-						<div class="btn-group" role="group" >
-							<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DcZO62cf%2FXkkcQipKwQzePOeEDrYVVa64LKpWJ%2Bin0XJRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWLyv%2BERp3Ky9K4avljY9AFoiZvHvrDA%2FYfn%2FK%2FPmzfPtQhly5Twm%2BN5IYULNg46oBA%3D
-"><button type="button" class="btn btn-danger btn-lg">点我抢券</button></a>
-
-							<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DcZO62cf%2FXkkcQipKwQzePOeEDrYVVa64LKpWJ%2Bin0XJRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWLyv%2BERp3Ky9K4avljY9AFoiZvHvrDA%2FYfn%2FK%2FPmzfPtQhly5Twm%2BN5IYULNg46oBA%3D
-"><button type="button" class="btn btn-warning btn-lg">去淘宝购买</button></a>
-						</div>
-					</div>
+">
+                        <button type="button" class="btn btn-warning btn-lg">去淘宝购买</button>
+                    </a>
+                </div>
+            </div>
 
 
+            <div class="col-xs-6 col-md-3" id="good">
+                <a href="#" class="thumbnail">
+                    <img src="http://img04.taobaocdn.com/bao/uploaded/i4/1125105440/TB23V8PgY8kpuFjy0FcXXaUhpXa_!!1125105440.jpg
+" width="290px" height="290px" alt="商品">
+                </a>
 
-					<div class="col-xs-6 col-md-3" id="good">
-						<a href="#" class="thumbnail">
-							<img src="http://img03.taobaocdn.com/bao/uploaded/i3/TB11JfGPpXXXXXMXFXXXXXXXXXX_!!0-item_pic.jpg
-"  width="290px" height="290px" alt="商品">
-						</a>
-						
-						<div class="btn-group" role="group" >
-							<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3D5Ja9wk8u0CscQipKwQzePOeEDrYVVa64K7Vc7tFgwiFRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWIgfv06HKMpP0XvN8JAfw8PSka33%2Bz2tAT7ECn4wWiO8Qf%2BlM%2FrQa71IYULNg46oBA%3D
-"><button type="button" class="btn btn-danger btn-lg">点我抢券</button></a>
+                <div class="btn-group" role="group">
+                    <a href="https://uland.taobao.com/coupon/edetail?e=uv%2B3B6H%2FZYEN%2BoQUE6FNzHxGqY6MdkGY6eiUI9ADT0HXr%2FLVg40ITzPKR4DOvb%2BMz48Slf6wwbfWRUUrHymVQBpywujSvOp2nUIklpPPqYLWWcBjjBVer8j3tOD5nyRS0PC98z5Qq0OmKa1zjLJ9fYpaYtL%2BHBpE&pid=mm_121565592_20930862_70828939&af=1
+">
+                        <button type="button" class="btn btn-danger btn-lg">点我抢券</button>
+                    </a>
 
-							<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3D5Ja9wk8u0CscQipKwQzePOeEDrYVVa64K7Vc7tFgwiFRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWIgfv06HKMpP0XvN8JAfw8PSka33%2Bz2tAT7ECn4wWiO8Qf%2BlM%2FrQa71IYULNg46oBA%3D
-"><button type="button" class="btn btn-warning btn-lg">去淘宝购买</button></a>
-						</div>
-					</div>
+                    <a href="https://s.click.taobao.com/t?e=m%3D2%26s%3D%2BvZy8GUmzZgcQipKwQzePOeEDrYVVa64LKpWJ%2Bin0XJRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWKZaLjq6blELe11Yi%2BCfneyqkq%2Bft%2FVZ4ZntdQAOesJIAYgHziGuDpaIYULNg46oBA%3D
+">
+                        <button type="button" class="btn btn-warning btn-lg">去淘宝购买</button>
+                    </a>
+                </div>
+            </div>
 
+            <div class="col-xs-6 col-md-3" id="good">
+                <a href="#" class="thumbnail">
+                    <img src="http://img03.taobaocdn.com/bao/uploaded/i3/TB11a81QXXXXXaIXpXXXXXXXXXX_!!0-item_pic.jpg
 
-					<div class="col-xs-6 col-md-3" id="good">
-						<a href="#" class="thumbnail">
-							<img src="http://img01.taobaocdn.com/bao/uploaded/i1/TB1eo4aQXXXXXbDXVXXXXXXXXXX_!!0-item_pic.jpg
-"  width="290px" height="290px" alt="商品">
-						</a>
-						
-						<div class="btn-group" role="group" >
-							<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3Dm891Z5j5EWQcQipKwQzePOeEDrYVVa64K7Vc7tFgwiFRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWIgfv06HKMpP17Fd8nRrQKG%2FdY5zlSILCNbbZwINKJRmG6%2F%2BEFtFKDkIYULNg46oBA%3D
-"><button type="button" class="btn btn-danger btn-lg">点我抢券</button></a>
+" width="290px" height="290px" alt="商品">
+                </a>
 
-							<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3Dm891Z5j5EWQcQipKwQzePOeEDrYVVa64K7Vc7tFgwiFRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWIgfv06HKMpP17Fd8nRrQKG%2FdY5zlSILCNbbZwINKJRmG6%2F%2BEFtFKDkIYULNg46oBA%3D
-"><button type="button" class="btn btn-warning btn-lg">去淘宝购买</button></a>
-						</div>
-					</div>
+                <div class="btn-group" role="group">
+                    <a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DTeWu4D819EQcQipKwQzePOeEDrYVVa64K7Vc7tFgwiFRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWLyv%2BERp3Ky9EXHY%2B8is0mQ%2FdY5zlSILCNzlrb7LJWYhCO%2FxcGdlq%2F0IYULNg46oBA%3D
 
+">
+                        <button type="button" class="btn btn-danger btn-lg">点我抢券</button>
+                    </a>
 
-<div class="col-xs-6 col-md-3" id="good">
-						<a href="#" class="thumbnail">
-							<img src="http://img03.taobaocdn.com/bao/uploaded/i3/TB1afNjPVXXXXXdXpXXXXXXXXXX_!!0-item_pic.jpg
-"  width="290px" height="290px" alt="商品">
-						</a>
-						
-						<div class="btn-group" role="group" >
-							<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DW6CAKS3Z41McQipKwQzePOeEDrYVVa64K7Vc7tFgwiFRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWKZaLjq6blELbsFdOyg7eW6Ska33%2Bz2tARVLMvoU7TBa7vsnm4ougXhIYULNg46oBA%3D
-"><button type="button" class="btn btn-danger btn-lg">点我抢券</button></a>
+                    <a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DTeWu4D819EQcQipKwQzePOeEDrYVVa64K7Vc7tFgwiFRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWLyv%2BERp3Ky9EXHY%2B8is0mQ%2FdY5zlSILCNzlrb7LJWYhCO%2FxcGdlq%2F0IYULNg46oBA%3D
 
-							<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DW6CAKS3Z41McQipKwQzePOeEDrYVVa64K7Vc7tFgwiFRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWKZaLjq6blELbsFdOyg7eW6Ska33%2Bz2tARVLMvoU7TBa7vsnm4ougXhIYULNg46oBA%3D
-"><button type="button" class="btn btn-warning btn-lg">去淘宝购买</button></a>
-						</div>
-					</div>
+">
+                        <button type="button" class="btn btn-warning btn-lg">去淘宝购买</button>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-6 col-md-3" id="good">
+                <a href="#" class="thumbnail">
+                    <img src="http://img01.taobaocdn.com/bao/uploaded/i1/TB1eo4aQXXXXXbDXVXXXXXXXXXX_!!0-item_pic.jpg
+" width="290px" height="290px" alt="商品">
+                </a>
 
+                <div class="btn-group" role="group">
+                    <a href="https://s.click.taobao.com/t?e=m%3D2%26s%3Dm891Z5j5EWQcQipKwQzePOeEDrYVVa64K7Vc7tFgwiFRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWIgfv06HKMpP17Fd8nRrQKG%2FdY5zlSILCNbbZwINKJRmG6%2F%2BEFtFKDkIYULNg46oBA%3D
+">
+                        <button type="button" class="btn btn-danger btn-lg">点我抢券</button>
+                    </a>
 
+                    <a href="https://s.click.taobao.com/t?e=m%3D2%26s%3Dm891Z5j5EWQcQipKwQzePOeEDrYVVa64K7Vc7tFgwiFRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWIgfv06HKMpP17Fd8nRrQKG%2FdY5zlSILCNbbZwINKJRmG6%2F%2BEFtFKDkIYULNg46oBA%3D
+">
+                        <button type="button" class="btn btn-warning btn-lg">去淘宝购买</button>
+                    </a>
+                </div>
+            </div>
 
-					<div class="col-xs-6 col-md-3" id="good">
-						<a href="#" class="thumbnail">
-							<img src="http://img04.taobaocdn.com/bao/uploaded/i4/TB1xFW3PFXXXXXhXFXXXXXXXXXX_!!0-item_pic.jpg
-"  width="290px" height="290px" alt="商品">
-						</a>
-						
-						<div class="btn-group" role="group" >
-							<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3Dd%2F0LfTo4aY0cQipKwQzePOeEDrYVVa64K7Vc7tFgwiFRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWIgfv06HKMpP6Rs1iuxHeg6m4EdNF0%2Fr2nZQWRBuiGvmocmWQ5QnILlIYULNg46oBA%3D
-"><button type="button" class="btn btn-danger btn-lg">点我抢券</button></a>
+            <div class="col-xs-6 col-md-3" id="good">
+                <a href="#" class="thumbnail">
+                    <img src="http://img03.taobaocdn.com/bao/uploaded/i3/3170309843/TB2qAALhwJlpuFjSspjXXcT.pXa_!!3170309843.jpg
+" width="290px" height="290px" alt="商品">
+                </a>
 
-							<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3Dd%2F0LfTo4aY0cQipKwQzePOeEDrYVVa64K7Vc7tFgwiFRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWIgfv06HKMpP6Rs1iuxHeg6m4EdNF0%2Fr2nZQWRBuiGvmocmWQ5QnILlIYULNg46oBA%3D
-"><button type="button" class="btn btn-warning btn-lg">去淘宝购买</button></a>
-						</div>
-					</div>
+                <div class="btn-group" role="group">
+                    <a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DcZO62cf%2FXkkcQipKwQzePOeEDrYVVa64LKpWJ%2Bin0XJRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWLyv%2BERp3Ky9K4avljY9AFoiZvHvrDA%2FYfn%2FK%2FPmzfPtQhly5Twm%2BN5IYULNg46oBA%3D
+">
+                        <button type="button" class="btn btn-danger btn-lg">点我抢券</button>
+                    </a>
 
-
-
-					<div class="col-xs-6 col-md-3" id="good">
-						<a href="#" class="thumbnail">
-							<img src="http://img01.taobaocdn.com/bao/uploaded/i1/TB1hWshPVXXXXaFXVXXXXXXXXXX_!!0-item_pic.jpg
-"  width="290px" height="290px" alt="商品">
-						</a>
-						
-						<div class="btn-group" role="group" >
-							<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DbSoNBizmB50cQipKwQzePOeEDrYVVa64K7Vc7tFgwiFRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWIgfv06HKMpPwhOkaDxp03rrtcwCAQRFFLR0CGQJJhbb8NzilN2sAtJIYULNg46oBA%3D
-"><button type="button" class="btn btn-danger btn-lg">点我抢券</button></a>
-
-							<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DbSoNBizmB50cQipKwQzePOeEDrYVVa64K7Vc7tFgwiFRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWIgfv06HKMpPwhOkaDxp03rrtcwCAQRFFLR0CGQJJhbb8NzilN2sAtJIYULNg46oBA%3D
-"><button type="button" class="btn btn-warning btn-lg">去淘宝购买</button></a>
-						</div>
-					</div>
+                    <a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DcZO62cf%2FXkkcQipKwQzePOeEDrYVVa64LKpWJ%2Bin0XJRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWLyv%2BERp3Ky9K4avljY9AFoiZvHvrDA%2FYfn%2FK%2FPmzfPtQhly5Twm%2BN5IYULNg46oBA%3D
+">
+                        <button type="button" class="btn btn-warning btn-lg">去淘宝购买</button>
+                    </a>
+                </div>
+            </div>
 
 
-			</div>
+            <div class="col-xs-6 col-md-3" id="good">
+                <a href="#" class="thumbnail">
+                    <img src="http://img03.taobaocdn.com/bao/uploaded/i3/TB11JfGPpXXXXXMXFXXXXXXXXXX_!!0-item_pic.jpg
+" width="290px" height="290px" alt="商品">
+                </a>
+
+                <div class="btn-group" role="group">
+                    <a href="https://s.click.taobao.com/t?e=m%3D2%26s%3D5Ja9wk8u0CscQipKwQzePOeEDrYVVa64K7Vc7tFgwiFRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWIgfv06HKMpP0XvN8JAfw8PSka33%2Bz2tAT7ECn4wWiO8Qf%2BlM%2FrQa71IYULNg46oBA%3D
+">
+                        <button type="button" class="btn btn-danger btn-lg">点我抢券</button>
+                    </a>
+
+                    <a href="https://s.click.taobao.com/t?e=m%3D2%26s%3D5Ja9wk8u0CscQipKwQzePOeEDrYVVa64K7Vc7tFgwiFRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWIgfv06HKMpP0XvN8JAfw8PSka33%2Bz2tAT7ECn4wWiO8Qf%2BlM%2FrQa71IYULNg46oBA%3D
+">
+                        <button type="button" class="btn btn-warning btn-lg">去淘宝购买</button>
+                    </a>
+                </div>
+            </div>
 
 
+            <div class="col-xs-6 col-md-3" id="good">
+                <a href="#" class="thumbnail">
+                    <img src="http://img01.taobaocdn.com/bao/uploaded/i1/TB1eo4aQXXXXXbDXVXXXXXXXXXX_!!0-item_pic.jpg
+" width="290px" height="290px" alt="商品">
+                </a>
 
-		
+                <div class="btn-group" role="group">
+                    <a href="https://s.click.taobao.com/t?e=m%3D2%26s%3Dm891Z5j5EWQcQipKwQzePOeEDrYVVa64K7Vc7tFgwiFRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWIgfv06HKMpP17Fd8nRrQKG%2FdY5zlSILCNbbZwINKJRmG6%2F%2BEFtFKDkIYULNg46oBA%3D
+">
+                        <button type="button" class="btn btn-danger btn-lg">点我抢券</button>
+                    </a>
 
-
-			<div class="row" align="center" id="FY">
-				<nav aria-label="Page navigation">
-					<ul class="pagination">
-						
-						<li><a href="#" >上一页</a></li>
-
-						<li class="active"><a href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#">5</a></li>
-						<li><a href="#" >下一页</a></li>
-						
-					</ul>
-				</nav>
-			</div>
-		</div>
-
-	</div>
+                    <a href="https://s.click.taobao.com/t?e=m%3D2%26s%3Dm891Z5j5EWQcQipKwQzePOeEDrYVVa64K7Vc7tFgwiFRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWIgfv06HKMpP17Fd8nRrQKG%2FdY5zlSILCNbbZwINKJRmG6%2F%2BEFtFKDkIYULNg46oBA%3D
+">
+                        <button type="button" class="btn btn-warning btn-lg">去淘宝购买</button>
+                    </a>
+                </div>
+            </div>
 
 
+            <div class="col-xs-6 col-md-3" id="good">
+                <a href="#" class="thumbnail">
+                    <img src="http://img03.taobaocdn.com/bao/uploaded/i3/TB1afNjPVXXXXXdXpXXXXXXXXXX_!!0-item_pic.jpg
+" width="290px" height="290px" alt="商品">
+                </a>
 
-<p id="footer">
-    <div id="footer" style="background-color: #373737;height: 190px;width: 100%;border-top: 3px solid #FF6C00;">
-    <div class="footer-wrapper " style="width: 1200px;margin: 0 auto;position: relative;text-align: center">
-        <img src="/static/images/bottom_text.png" alt="" style="border: 0;margin-top: 50px;">
+                <div class="btn-group" role="group">
+                    <a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DW6CAKS3Z41McQipKwQzePOeEDrYVVa64K7Vc7tFgwiFRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWKZaLjq6blELbsFdOyg7eW6Ska33%2Bz2tARVLMvoU7TBa7vsnm4ougXhIYULNg46oBA%3D
+">
+                        <button type="button" class="btn btn-danger btn-lg">点我抢券</button>
+                    </a>
 
-        <div class="author" style="    position: absolute;
-    top: 67px;
-    left: 990px;
-    color: #FFFFFF;
-    font-size: 18px;">by
-            &nbsp;&nbsp;采微网全网实时数据</div>
-        <div class="text" style="color: #a2a2a2;
-    font-size: 16px;
-    margin-top: 33px;">© CopyRight&nbsp;2017            &nbsp;<a href="http://www.xueshengjuan.com" target="_blank" rel="nofollow" style="color:#a2a2a2;">采微网全网实时数据</a>
-            &nbsp;http://www.xueshengjuan.com&nbsp;&nbsp;<a href="http://www.xueshengjuan.com" target="_blank" rel="nofollow" style="color:#a2a2a2;">ICP证：粤B2-202370195</a>
-            &nbsp;&nbsp;</div>
+                    <a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DW6CAKS3Z41McQipKwQzePOeEDrYVVa64K7Vc7tFgwiFRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWKZaLjq6blELbsFdOyg7eW6Ska33%2Bz2tARVLMvoU7TBa7vsnm4ougXhIYULNg46oBA%3D
+">
+                        <button type="button" class="btn btn-warning btn-lg">去淘宝购买</button>
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="col-xs-6 col-md-3" id="good">
+                <a href="#" class="thumbnail">
+                    <img src="http://img04.taobaocdn.com/bao/uploaded/i4/TB1xFW3PFXXXXXhXFXXXXXXXXXX_!!0-item_pic.jpg
+" width="290px" height="290px" alt="商品">
+                </a>
+
+                <div class="btn-group" role="group">
+                    <a href="https://s.click.taobao.com/t?e=m%3D2%26s%3Dd%2F0LfTo4aY0cQipKwQzePOeEDrYVVa64K7Vc7tFgwiFRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWIgfv06HKMpP6Rs1iuxHeg6m4EdNF0%2Fr2nZQWRBuiGvmocmWQ5QnILlIYULNg46oBA%3D
+">
+                        <button type="button" class="btn btn-danger btn-lg">点我抢券</button>
+                    </a>
+
+                    <a href="https://s.click.taobao.com/t?e=m%3D2%26s%3Dd%2F0LfTo4aY0cQipKwQzePOeEDrYVVa64K7Vc7tFgwiFRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWIgfv06HKMpP6Rs1iuxHeg6m4EdNF0%2Fr2nZQWRBuiGvmocmWQ5QnILlIYULNg46oBA%3D
+">
+                        <button type="button" class="btn btn-warning btn-lg">去淘宝购买</button>
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="col-xs-6 col-md-3" id="good">
+                <a href="#" class="thumbnail">
+                    <img src="http://img01.taobaocdn.com/bao/uploaded/i1/TB1hWshPVXXXXaFXVXXXXXXXXXX_!!0-item_pic.jpg
+" width="290px" height="290px" alt="商品">
+                </a>
+
+                <div class="btn-group" role="group">
+                    <a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DbSoNBizmB50cQipKwQzePOeEDrYVVa64K7Vc7tFgwiFRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWIgfv06HKMpPwhOkaDxp03rrtcwCAQRFFLR0CGQJJhbb8NzilN2sAtJIYULNg46oBA%3D
+">
+                        <button type="button" class="btn btn-danger btn-lg">点我抢券</button>
+                    </a>
+
+                    <a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DbSoNBizmB50cQipKwQzePOeEDrYVVa64K7Vc7tFgwiFRAdhuF14FMdFffDIyalfuRitN3%2FurF3y3Q4U0TT0V6xJcUKo1VSCQMlReafTCfWIgfv06HKMpPwhOkaDxp03rrtcwCAQRFFLR0CGQJJhbb8NzilN2sAtJIYULNg46oBA%3D
+">
+                        <button type="button" class="btn btn-warning btn-lg">去淘宝购买</button>
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="row" align="center" id="FY">
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+
+                    <li><a href="#">上一页</a></li>
+
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">下一页</a></li>
+
+                </ul>
+            </nav>
+        </div>
     </div>
+
 </div>
-</p>
 
 
-</body>
-</html>
+{% include 'common/footer.html' without context %}

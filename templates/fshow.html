@@ -1,297 +1,82 @@
+{% include 'common/header.html' without context %}
+{% include 'common/nav.html' without context %}
+<div id="banner">
 
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-	<meta charset="utf-8">
-	<meta name="description" content="采微网是一个免费分享优惠券的地方">
-	<title>
-	首页--采微网choin</title>
-	<link rel="stylesheet" href="/static/css/bootstrap.css">
-	<link rel="stylesheet" href="/static/css/style.css">
-	<script type="text/javascript" src="/static/js/jquery-3.1.1.js"></script>
-	<script type="text/javascript" src="/static/js/xueshengjuan.js"></script>
-	<script type="text/javascript" src="/static/js/bootstrap.js"></script>
-	<script type="text/javascript" src="/static/js/util.js"></script>
-	<script type="text/javascript" src="/static/js/taodianjin.js"></script>
-    <script type="text/javascript">
-    (function(win,doc){
-        var s = doc.createElement("script"), h = doc.getElementsByTagName("head")[0];
-        if (!win.alimamatk_show) {
-            s.charset = 'gbk';
-            s.async = true;
-            s.src = "http://a.alimama.cn/tkapi.js";
-            s.kslite = "";
-            h.insertBefore(s, h.firstChild);
-        }
-        var o = {
-            pid: "mm_10011550_2325296_9002527",
-            unid:"",
-            appkey:"",
-            plugins: [
-                //{name: 'keyword'},   /*内文关键字插件*/
-                //{name: 'aroundbox'}  /*任意位置角标插件*/
-            ]
-        }
-        win.alimamatk_onload = win.alimamatk_onload || [];
-        win.alimamatk_onload.push(o);
-    })(window,document);
-</script>
-</head>
-<body>
-	<!--教程中的bootstrap版本不同,样式调用代码也不一样-->
+    <div class="row">
+        <!--列表-->
+        <div class="col-xs-2">
 
+            <div class="list-group" id="R1">
+                <a href="/girlwear" class="list-group-item" align="center">女装</a>
+                <a href="/motherbaby" class="list-group-item" align="center">婴儿装</a>
+                <a href="/boywear" class="list-group-item" align="center">男装</a>
+                <a href="/foods" class="list-group-item" align="center">零食</a>
+                <a href="/Homedaily" class="list-group-item" align="center">居家日用</a>
+                <a href="/shoes" class="list-group-item" align="center">女鞋</a>
+                <a href="/book" class="list-group-item" align="center">汽车用品</a>
+            </div>
 
-	<div class="header">
-		<div class="container"><!--居中显示-->
-            <div class="row">
-                <div class="col-xs-12 col-md-8" id="row1font">
-                {{username}}，您好！
+        </div>
+        <!--轮番-->
+        <div class="col-xs-7">
+            <div id="myCarousel" class="carousel slide">
+                <!-- 轮播（Carousel）指标 -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>
+                <!-- 轮播（Carousel）项目 -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="/static/content/01.jpg" alt="First slide">
+                    </div>
+                    <div class="item">
+                        <img src="/static/content/02.jpg" alt="Second slide">
+                    </div>
+                    <div class="item">
+                        <img src="/static/content/03.jpg" alt="Third slide">
+                    </div>
+                    <div class="item">
+                        <img src="/static/content/04.jpg" alt="Four slide">
+                    </div>
                 </div>
-                <div class="col-xs-6 col-md-4">
-                    <div id="buttonLogin" align="left">
-                    <button type="button" class="btn btn-primary btn" data-toggle="modal" data-target="#myModal">
-                    登陆/注册
-                    </button>
-                        </div>
+                <!-- 轮播（Carousel）导航 -->
+                <a class="carousel-control left" href="#myCarousel"
+                   data-slide="prev">&lsaquo;</a>
+                <a class="carousel-control right" href="#myCarousel"
+                   data-slide="next">&rsaquo;</a>
+            </div>
+        </div>
+
+        <div class="col-xs-3 pull-right">
+            <div class="right-pic-cate">
+                <div class="bdshare">
+                    <div class="bdsharebuttonbox bdshare-button-style0-24" data-bd-bind="1489320813342">
+
+
+                        <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone"
+                                                                            title="分享到QQ空间"></a><a href="#"
+                                                                                                   class="bds_tsina"
+                                                                                                   data-cmd="tsina"
+                                                                                                   title="分享到新浪微博"></a><a
+                            href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren"
+                                                                                           data-cmd="renren"
+                                                                                           title="分享到人人网"></a><a
+                            href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
                 </div>
             </div>
-            <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
-                <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">用户登陆</h4>
-                </div>
-            <div class="modal-body">
-            <form action="/login" method="post">
-            <div class="input-group">
-                <span id="basic-addon1">用户名</span>
-                <input id="userName" name="username" type="text" class="form-control" placeholder="用户名" aria-describedby="basic-addon1">
-            </div>
-    <br>
-<!--下面是密码输入框-->
-    <div class="input-group">
-        <span  id="basic-addon1">密码</span>
-        <input id="passWord" type="text" name="password" class="form-control" placeholder="密码" aria-describedby="basic-addon1">
+
+        </div>
+
     </div>
 
 
-<br>
-<!--下面是登陆按钮,包括颜色控制-->
-                <button ID="model1_btn" type="submit" style="width:280px;" class="btn btn-sm">登 录</button>
-                <button type="button" class="btn btn-sm" style="width:280px;" data-toggle="modal" data-target="#myModal2" data-dismiss="modal">注册</button>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-sm" data-dismiss="modal">关闭窗口</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
- <div class="modal fade" tabindex="-1" role="dialog" id="myModal2">
-                <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title">用户注册</h4>
-                </div>
-            <div class="modal-body">
-            <form action="/register" method="post">
-            <div class="input-group">
-                <span  id="basic-addon1" style="height:12px;">用户名</span>
-                <input id="userName" name="username" type="text" class="form-control" placeholder="用户名" aria-describedby="basic-addon1">
-            </div>
-    <br>
-<!--下面是密码输入框-->
-    <div class="input-group">
-        <span id="basic-addon1" style="height:12px;">密码</span>
-        <input id="passWord" type="password" name="password" class="form-control" placeholder="密码" aria-describedby="basic-addon1">
-    </div>
-    <div class="input-group">
-        <span  id="basic-addon1" style="height:12px;">确认密码</span>
-        <input id="passWord" type="password" name="repassword" class="form-control" placeholder="密码" aria-describedby="basic-addon1">
-    </div>
-                <div class="input-group">
-            <span id="basic-addon1">电子邮箱</span>
-            <input id="passWord" type="text" name="email" class="form-control" placeholder="电子邮箱" aria-describedby="basic-addon1">
-                </div>
-
-<br>
-<!--下面是登陆按钮,包括颜色控制-->
-                <button id="registerBtn" type="submit" style="width:280px;" class="btn btn-default">注册</button>
-
-        </form>
-      </div>
-      <div class="modal-footer">
-          <button type="button" class="btn btn-sm" data-toggle="modal" data-target="#myModal" data-dismiss="modal">
-                    登陆
-          </button>
-        <button type="button" class="btn btn-sm" data-dismiss="modal">关闭窗口</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-
-
-			<div class="row"><!--行样式-->
-
-				<div class="col-xs-6 col-md-4"><!--大小控制-->
-					<a href="/" title="回到首页">
-						<img id="logo" src="/static/images/logo.jpg" alt="采薇网">
-					</a>
-				</div>
-
-				<div class="col-xs-6 col-md-4">
-					<div class="input-group" id="search">
-						<form action="/searchmore" method="post">
-							<input type="text" class="form-control" placeholder="搜索优惠券..." name="goodsname">
-							<span class="input-group-btn">
-							<button class="btn btn-default" type="submit"></button>
-							</span>
-						</form>
-						
-					</div>
-				</div>
-
-				<div class="showChar col-xs-6 col-md-4">
-					<div class="showChar-div showChar-3 right">
-						<i></i>
-						<span>验货保障</span>
-					</div>
-					<div class="showChar-div showChar-2">
-						<i></i>
-						<span>买手砍价</span>
-					</div>
-					<div class="showChar-div showChar-1">
-						<i></i>
-						<span>9:00开抢</span>
-					</div>
-				</div>
-
-			</div>
-		</div>
-	</div>
-
-
-	<nav id="navigation" class="navbar navbar-default">
-		<div class="container-fluid">
-			<div class="navbar-headefile:/./index.html#r">
-				<ul class="nav nav-tabs" id="IT">
-					<li role="presentation" class="active"><a href="/">首页</a></li>
-					<li role="presentation" ><a  href="/juanlive?userid={{ userid }}">抢劵直播</a></li>
-					<li role="presentation"><a href="/charts?userid={{ userid }}">抢购排行榜</a></li>
-					<li role="presentation"><a href="/jiu?userid={{ userid }}">9块9包邮</a></li>
-                    <li role="presentation"><a href="/selfinfo?userid={{ session.get('userid') }}">个人中心</a></li>
-				</ul>
-			</div>
-		</div>
-
-	</nav>
-
-
-
-
-
-	<div id="banner">
-
-		<div class="row">
-			<!--列表-->
-			<div class="col-xs-2">
-
-				<div class="list-group" id="R1">
-					<a href="/girlwear" class="list-group-item" align="center">女装</a>
-					<a href="/motherbaby" class="list-group-item" align="center">婴儿装</a>
-					<a href="/boywear" class="list-group-item" align="center">男装</a>
-					<a href="/foods" class="list-group-item" align="center">零食</a>
-					<a href="/Homedaily" class="list-group-item" align="center">居家日用</a>
-					<a href="/shoes" class="list-group-item" align="center">女鞋</a>
-					<a href="/book" class="list-group-item" align="center">汽车用品</a>
-				</div>	
-
-			</div>
-			<!--轮番-->
-			<div class="col-xs-7">
-                <div id="myCarousel" class="carousel slide">
-	<!-- 轮播（Carousel）指标 -->
-	<ol class="carousel-indicators">
-		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-		<li data-target="#myCarousel" data-slide-to="1"></li>
-		<li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
-	</ol>
-	<!-- 轮播（Carousel）项目 -->
-	<div class="carousel-inner">
-		<div class="item active">
-			<img src="/static/content/01.jpg" alt="First slide">
-		</div>
-		<div class="item">
-			<img src="/static/content/02.jpg" alt="Second slide">
-		</div>
-		<div class="item">
-			<img src="/static/content/03.jpg" alt="Third slide">
-		</div>
-        <div class="item">
-			<img src="/static/content/04.jpg" alt="Four slide">
-		</div>
-	</div>
-	<!-- 轮播（Carousel）导航 -->
-	<a class="carousel-control left" href="#myCarousel"
-	   data-slide="prev">&lsaquo;</a>
-	<a class="carousel-control right" href="#myCarousel"
-	   data-slide="next">&rsaquo;</a>
 </div>
-			</div>
-
-			<div class="col-xs-3 pull-right">
-				<div class="right-pic-cate">
-					<div class="bdshare">
-						<div class="bdsharebuttonbox bdshare-button-style0-24" data-bd-bind="1489320813342">
 
 
-
-							<a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
-						</div>
-					</div>
-
-				</div>
-
-			</div>
+{{ info }}
 
 
-		</div>
-
-
-
-
-
-
-
-
-		{{ info }}
-
-
-<p id="footer">
-    <div id="footer" style="background-color: #373737;height: 190px;width: 100%;border-top: 3px solid #FF6C00;">
-    <div class="footer-wrapper " style="width: 1200px;margin: 0 auto;position: relative;text-align: center">
-        <img src="/static/images/bottom_text.png" alt="" style="border: 0;margin-top: 50px;">
-
-        <div class="author" style="    position: absolute;
-    top: 67px;
-    left: 990px;
-    color: #FFFFFF;
-    font-size: 18px;">by
-            &nbsp;&nbsp;采微网全网实时数据</div>
-        <div class="text" style="color: #a2a2a2;
-    font-size: 16px;
-    margin-top: 33px;">© CopyRight&nbsp;2017            &nbsp;<a href="http://www.xueshengjuan.com" target="_blank" rel="nofollow" style="color:#a2a2a2;">采微网全网实时数据</a>
-            &nbsp;http://www.xueshengjuan.com&nbsp;&nbsp;<a href="http://www.xueshengjuan.com" target="_blank" rel="nofollow" style="color:#a2a2a2;">ICP证：粤B2-202370195</a>
-            &nbsp;&nbsp;</div>
-    </div>
-    </div>
-</p>
-
-
-</body>
-</html>
+{% include 'common/footer.html' without context %}

@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 import xlrd
-import mysql.connector
+import pymysql
 import os
 # Open the workbook and define the worksheet
 
@@ -12,7 +12,7 @@ def excle2sql():
     if os.path.exists('./upload/goods.xls'):
         book = xlrd.open_workbook("./upload/goods.xls")
         sheet = book.sheet_by_name("Page1")
-        database = mysql.connector.connect(host="localhost", user="root", passwd="325602", db="caiweiwang")
+        database = pymysql.connect(host="localhost", user="root", passwd="root", db="caiweiwang")
 
         # 获得游标对象, 用于逐行遍历数据库数据
         cursor = database.cursor()

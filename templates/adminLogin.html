@@ -1,0 +1,26 @@
+{% include 'common/adminhead.html' without context %}
+
+<div class="login-container">
+	<form action="/admin/login" method=post class="form-login">
+		<ul class="login-nav">
+			<li class="login-nav__item active">
+				<a href="#">登录</a>
+			</li>
+		</ul>
+		<label for="login-input-user" class="login__label" >
+			用户名：
+		</label>
+		<input id="login-input-user" class="login__input" type="text" name="username"/>
+		<label for="login-input-password" class="login__label">
+			密码：
+		</label>
+		<input id="login-input-password" class="login__input" type="password" name="password"/>
+		<label for="login-sign-up" class="login__label--checkbox">
+			<input id="login-sign-up" type="checkbox" class="login__input--checkbox" />
+			保持登录
+		</label>
+		<button class="login__submit" type="submit">登录</button>
+	</form>
+</div>
+
+{% include 'common/adminfooter.html' without context %}
