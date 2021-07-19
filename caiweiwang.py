@@ -52,6 +52,25 @@ configure_uploads(app, set_mypic)
 app.config['SECRET_KEY'] = 'xxxxx'
 
 
+@app.errorhandler(401)
+def page_unauthorized(error):
+    return render_template('error.html', info="401")
+
+
+@app.errorhandler(404)
+def page_unauthorized(error):
+    return render_template('error.html', info="404")
+
+
+@app.errorhandler(403)
+def page_unauthorized(error):
+    return render_template('error.html', info="403")
+
+
+@app.errorhandler(500)
+def page_unauthorized(error):
+    return render_template('error.html', info="500")
+
 def url_for_other_page(page):
     args = request.view_args.copy()
     args['page'] = page
