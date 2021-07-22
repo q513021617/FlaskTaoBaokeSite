@@ -1,6 +1,4 @@
-# 项目预览地址
 
-[项目预览](http://shop.zhiyigo.cn)
 
 # 项目背景
 > &nbsp;&nbsp;&nbsp; 一个基于python语言开发的导购网站，一位朋友在n年前托我开发用于社群营销的一个网站，当时也由于只会用python做web系统，因此就选用的python做这个系统。数据来源于某大型淘客系统开放api。
@@ -28,3 +26,15 @@
 
 ![5.png](http://cdn.zhiyigo.cn/03f9b09141fe4786b94d692b6a0d080a5.png)
 ![7.png](http://cdn.zhiyigo.cn/73d072970dc7496ea8eaf9dad5460f627.png)
+
+# 项目预览地址
+
+[项目预览](http://shop.zhiyigo.cn)
+
+# 项目开源地址
+
+[项目源码](https://github.com/q513021617/FlaskTaoBaokeSite)
+
+# 联系作者
+
+发送邮件至 1871901600@qq.com
