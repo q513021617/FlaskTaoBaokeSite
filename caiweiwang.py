@@ -44,6 +44,7 @@ app.register_blueprint(blueprint=goodsadmin, url_prefix='/admin')
 app.register_blueprint(blueprint=adminProxy, url_prefix='/admin')
 app.register_blueprint(blueprint=useradmin, url_prefix='/admin')
 app.register_blueprint(blueprint=indexadmin, url_prefix='/admin')
+
 set_mypic = UploadSet('mypic')
 bootstrap = Bootstrap(app)
 app.config['UPLOADED_MYPIC_DEST'] = './upload'
@@ -71,6 +72,7 @@ def page_unauthorized(error):
 def page_unauthorized(error):
     return render_template('error.html', info="500")
 
+
 def url_for_other_page(page):
     args = request.view_args.copy()
     args['page'] = page
@@ -81,4 +83,4 @@ app.jinja_env.globals['url_for_other_page'] = url_for_other_page
 
 
 if __name__ == '__main__':
-    app.run(debug=False,host="0.0.0.0",port=5000)
+    app.run(debug=False, host="0.0.0.0", port=5000)

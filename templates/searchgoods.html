@@ -1,140 +1,146 @@
-{% include 'common/adminhead.html' without context %}
-{% include 'common/adminNav.html' without context %}
+{% include 'common/adminhead.html'  %}
+{% include 'common/adminNav.html'  %}
 
-    <!-- content start -->
-    <div class="admin-content">
-        <div class="admin-content-body">
-            <div class="am-cf am-padding am-padding-bottom-0">
-                <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">商品管理</strong> / <small></small>
+<!-- content start -->
+<div class="admin-content">
+    <div class="admin-content-body">
+        <div class="am-cf am-padding am-padding-bottom-0">
+            <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">商品管理</strong> / <small></small>
+            </div>
+        </div>
+
+
+        <hr>
+
+        <div class="am-g">
+            <div class="am-u-sm-12 am-u-md-6">
+                <div class="am-btn-toolbar">
+
+                    <div class="am-btn-group am-btn-group-xs">
+                         <button type="button" class="am-btn am-btn-default" onclick="addGood()"><span class="am-icon-plus"></span>
+                                新增
+                         </button>
+
+                         <button type="button" class="am-btn am-btn-default btn-block-left" id="batchGetGoods" onclick=""><span class="am-icon-plus"></span>
+                                手动批量爬取商品数据入库
+                         </button>
+
+                    </div>
+
+
                 </div>
             </div>
 
+            <div class="am-u-sm-12 am-u-md-4">
 
-            <hr>
+                    <form action="/admin/searchgoodbyID" method="post">
+                        <div class="am-input-group am-input-group-sm">
+                        <input type="text" class="am-form-field" name="searchID">
+                        <span class="am-input-group-btn"><button class="am-btn am-btn-default" type="submit">搜索</button> </span>
+                             </div>
+                    </form>
 
-            <div class="am-g">
-                <div class="am-u-sm-12 am-u-md-6">
-                    <div class="am-btn-toolbar">
-                        <div class="am-btn-group am-btn-group-xs">
-                            <a href="/addgoods">
-                                <button type="button" class="am-btn am-btn-default"><span class="am-icon-plus"></span>
-                                    新增
-                                </button>
-                            </a>
 
-                        </div>
-                    </div>
-                </div>
-
-                <div class="am-u-sm-12 am-u-md-3">
-                    <div class="am-input-group am-input-group-sm">
-                        <form action="/searchgoodbyID" method="post">
-                            <input type="text" name="searchID" class="am-form-field">
-                            <span class="am-input-group-btn">
-            <button class="am-btn am-btn-default" type="submit">搜索</button>
-          </span>
-                        </form>
-                    </div>
-                </div>
             </div>
+        </div>
 
 
-            <div>
-                <form method=["post","get"]>
-                    <table class="table table-hover">
-                        <thead>
+        <div>
+            <form method=["post","get"]>
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th class="table-id">商品ID</th>
+                        <th class="table-title">商品名称</th>
+                        <th class="table-author">商品主图</th>
+                        <th class="table-author am-hide-sm-only">商品类别</th>
+                        <th class="table-author am-hide-sm-only">商品销售价格</th>
+                        <th class="table-set">佣金比例</th>
+                        <th class="table-set">佣金</th>
+                        <th class="table-set">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {{ erro }}
+                    {% for i in goods %}
+
                         <tr>
-                            <th class="table-id">商品ID</th>
-                            <th class="table-title">商品名称</th>
-                            <th class="table-author">商品主图</th>
-                            <th class="table-author am-hide-sm-only">商品类别</th>
-                            <th class="table-author am-hide-sm-only">商品销售价格</th>
-                            <th class="table-set">佣金比例</th>
-                            <th class="table-set">佣金</th>
-                            <th class="table-set">操作</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        {{ erro }}
-                        {% for i in goods %}
 
-                            <tr>
-
-                                <td>{{ i.goodsId }}</td>
-                                <td><a href="/singlegoods?goodsid={{ i.goodsId }}">{{ i.goodsName }}</a></td>
-                                 <td><img src="{{ i.goodsimage }}" width="100px" height="100px"/></td>
-                                <td>{{ i.goodsCla }}</td>
-                                <td>{{ i.goodPri }}</td>
-                                <td>{{ i.CTI }}</td>
-                                <td>
+                            <td>{{ i.goodsId }}</td>
+                            <td><a href="/admin/singlegoods?goodsid={{ i.goodsId }}">{{ i.goodsName }}</a></td>
+                            <td><img src="{{ i.goodsimage }}" width="100px" height="100px"/></td>
+                            <td>{{ i.goodsCla }}</td>
+                            <td>{{ i.goodPri }}</td>
+                            <td>{{ i.CTI }}</td>
+                            <td>
                                 {{ i.Commission }}
-                                <td>
-                                <td>
+                            <td>
+                            <td>
+                                <div>
                                     <div>
-                                        <div>
-                                            <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span
-                                                    class="am-icon-pencil-square-o"></span> <a
-                                                    href="/editsinglegoods?goodsid={{ i.goodsId }}">编辑</a></button>
+                                        <button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span
+                                                class="am-icon-pencil-square-o"></span> <a
+                                                href="/admin/editsinglegoods?goodsid={{ i.goodsId }}">编辑</a></button>
 
-                                            <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only">
-                                                <span class="am-icon-trash-o"></span> <a
-                                                    href="/deletegoods?goodsid={{ i.goodsId }}">删除</a></button>
-                                        </div>
+                                        <button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only">
+                                            <span class="am-icon-trash-o"></span> <a
+                                                href="/admin/deletegoods?goodsid={{ i.goodsId }}">删除</a></button>
                                     </div>
-                                </td>
-                            </tr>
-                        {% endfor %}
-
-                        <tr>
-                            <ul class="pagination">
-                                {% if pagination.has_prev %}
-                                    <li><a href="{{ url_for_other_page(pagination.page - 1) }}" aria-label="next">上一页
-                                        &raquo;</a>
-                                        {% else %}
-                                    <li><a href="#" aria-label="next">上一页 &raquo;</a>
-                                {% endif %}
-
-
-
-                                {% for page in pagination.iter_pages() %}
-
-                                    {% if page %}
-
-                                        {% if page != pagination.page %}
-                                            <li><a href="{{ url_for_other_page(page) }}">{{ page }}</a></li>
-                                        {% else %}
-                                            <li class="active"><a>{{ page }}</a></li>
-                                        {% endif %}
-                                    {% else %}
-                                        <li><a>…</a></li>
-                                    {% endif %}
-                                {% endfor %}
-                                {% if pagination.has_next %}
-                                    <li><a href="{{ url_for_other_page(pagination.page + 1) }}" aria-label="Previous">下一页
-                                        &raquo;</a>
-                                        {% else %}
-                                    <li><a href="#" aria-label="next">下一页 &raquo;</a>
-                                {% endif %}
-
-
-                            </ul>
+                                </div>
+                            </td>
                         </tr>
-                        </tbody>
-                    </table>
+                    {% endfor %}
 
-                    <hr/>
-                    <p>注：此处可以对所有用户进行增加删除.</p>
-                </form>
+                    <tr>
+                        <ul class="pagination">
+                            {% if pagination.has_prev %}
+                                <li><a href="{{ url_for_other_page(pagination.page - 1) }}" aria-label="next">上一页
+                                    &raquo;</a>
+                                    {% else %}
+                                <li><a href="#" aria-label="next">上一页 &raquo;</a>
+                            {% endif %}
 
 
-            </div>
+
+                            {% for page in pagination.iter_pages() %}
+
+                                {% if page %}
+
+                                    {% if page != pagination.page %}
+                                        <li><a href="{{ url_for_other_page(page) }}">{{ page }}</a></li>
+                                    {% else %}
+                                        <li class="active"><a>{{ page }}</a></li>
+                                    {% endif %}
+                                {% else %}
+                                    <li><a>…</a></li>
+                                {% endif %}
+                            {% endfor %}
+                            {% if pagination.has_next %}
+                                <li><a href="{{ url_for_other_page(pagination.page + 1) }}" aria-label="Previous">下一页
+                                    &raquo;</a>
+                                    {% else %}
+                                <li><a href="#" aria-label="next">下一页 &raquo;</a>
+                            {% endif %}
+
+
+                        </ul>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <hr/>
+                <p>注：此处可以对所有用户进行增加删除.</p>
+            </form>
+
 
         </div>
+
     </div>
-    <!-- content end -->
+</div>
+<!-- content end -->
 </div>
 
 <a href="#" class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu"
    data-am-offcanvas="{target: '#admin-offcanvas'}"></a>
 
-{% include 'common/adminfooter.html' without context %}
+{% include 'common/adminfooter.html'  %}

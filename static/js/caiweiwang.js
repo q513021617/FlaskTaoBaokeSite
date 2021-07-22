@@ -6,13 +6,16 @@ $(function(){
 	$('[data-toggle="tooltip"]').tooltip()
 	$('[data-toggle="popover"]').popover()
 
-	$("#R1 a").mouseenter(function(){
-		$(this).addClass("active");
-	}).mouseleave(function(){
-    //鼠标移出
- 	$(this).removeClass("active");
-});
+    $("#R1 a").mouseenter(function () {
+        $(this).addClass("active");
+    }).mouseleave(function () {
+        //鼠标移出
+        $(this).removeClass("active");
+    });
 
+    $("#navbar a").click(function () {
+        $(this).addClass("active");
+    })
 
 //百度分享
 window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"32"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
@@ -20,6 +23,7 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
 $('#myModal').on('shown.bs.modal', function () {
   $('#myInput').focus();
 });
+
 
 
 
@@ -40,22 +44,6 @@ $('#myModal').on('shown.bs.modal', function () {
     //鼠标移出
  	$(this).removeClass("active");
 });
-
-	$('#myModal #model1_btn').onclick(function (){
-    if( $("#myModal form #userName").val() == "" || $("#myModal form #passWord").val() == "")
-    {
-        alert("用户名！");
-        return false;
-    }});
-
-	$('myModal2 #registerBtn').onclick(function (){
-    if( $("#myModal form #userName").val() == "" || $("#myModal form #passWord").val() == "")
-    {
-        alert("注册请填好用户名和密码");
-        return false;
-    }});
-
-
 
 
 	//以下代码添加数字按钮和按钮后的半透明条，还有上一页、下一页两个按钮  

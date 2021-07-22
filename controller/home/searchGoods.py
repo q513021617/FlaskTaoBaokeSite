@@ -125,24 +125,3 @@ def singlepage(page):
     if session.get('username')== None:
         return render_template('singlepage.html', goods=goods, pagination=pageination,goods1=goods1)
     return render_template('singlepage.html', username=session.get('username'), goods=goods, pagination=pageination,goods1=goods1)
-
-
-@search.route('/searchgoodbyID', methods=['GET', 'POST'])
-def searchgoodbyID():
-    if request.method == 'POST':
-        goodsId = request.form['searchID']
-        print(goodsId)
-        rs = DBSession.query(Goods).filter(Goods.goodsId == goodsId).first()
-        if( rs!=None):
-            page = 1
-            goods = DBSession.query(Goods).filter(Goods.goodsId == goodsId)
-            count = DBSession.query(Goods).filter(Goods.goodsId == goodsId).count()
-            if not goods and page != 1:
-                abort(404)
-            pageination = Pagination(page, 1, count)
-
-            return render_template('searchgoods.html', goods=goods, pagination=pageination)
-        else:
-            erro = "没有找到商品,,请正确输入商品ID!!"
-
-            return render_template('show.html', info=erro)

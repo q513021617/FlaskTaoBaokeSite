@@ -1,5 +1,5 @@
-{% include 'common/adminhead.html' without context %}
-{% include 'common/adminNav.html' without context %}
+{% include 'common/adminhead.html'  %}
+{% include 'common/adminNav.html'  %}
 
 <!-- content start -->
 <div class="admin-content">
@@ -25,14 +25,16 @@
             </div>
 
             <div class="am-u-sm-12 am-u-md-3">
-                <div class="am-input-group am-input-group-sm">
+
                     <form action="/searchbillbyID" method="post">
+                        <div class="am-input-group am-input-group-sm">
                         <input type="text" name="searchID" class="am-form-field">
                         <span class="am-input-group-btn">
             <button class="am-btn am-btn-default" type="submit">搜索</button>
           </span>
+                             </div>
                     </form>
-                </div>
+
             </div>
         </div>
 
@@ -129,4 +131,4 @@
 <a href="#" class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu"
    data-am-offcanvas="{target: '#admin-offcanvas'}"></a>
 
-{% include 'common/adminfooter.html' without context %}
+{% include 'common/adminfooter.html'  %}

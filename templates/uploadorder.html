@@ -1,51 +1,48 @@
-{% include 'common/adminhead.html' without context %}
+{% include 'common/adminhead.html'  %}
+{% include 'common/adminNav.html'  %}
 {% import "bootstrap/wtf.html" as wtf %}
-  <!-- content start -->
-  <div class="admin-content" align="center">
-    <div class="admin-content-body" >
-
-
-      <hr/>
-
-      <div class="am-g" align="center">
-        <div class="am-u-sm-12 am-u-md-12">
-         {% import "bootstrap/wtf.html" as wtf %}
-            {% block page_content %}
-             <h4>uploaded: {% if url %} {{url}}{% endif %}</h4>
-                {{ wtf.quick_form(form, enctype="multipart/form-data") }}
+<!-- content start -->
+<div class="admin-content" align="center">
+    <div class="admin-content-body">
+        <hr/>
+        <div class="am-g" align="center">
+            <div class="am-u-sm-12 am-u-md-12">
+                {% import "bootstrap/wtf.html" as wtf %}
+                {% block page_content %}
+                    <h4>uploaded: {% if url %} {{ url }}{% endif %}</h4>
+                    {{ wtf.quick_form(form, enctype="multipart/form-data") }}
                 {% endblock page_content %}
 
-          <div class="am-panel am-panel-default">
+                <div class="am-panel am-panel-default">
+                    <p>上传信息</p>
+                    <div class="am-progress am-progress-sm">
+                        <div class="am-progress-bar am-progress-bar-success"></div>
+                    </div>
+                    <a href="/admin/Inputbills">点击导入账单</a></br>
+                    <a href="/admin/deleteAllbill">点击删除所有在线账单</a><span>注意!这个功能是删除所有账单数据!!!</span>
+                    <a href="/admin/delbillExcel">点击删除账单Excel表格</a>
 
-                <p>上传信息</p>
-                <div class="am-progress am-progress-sm">
-                  <div class="am-progress-bar am-progress-bar-success" ></div>
                 </div>
-
-                  <a href="/Inputbills">点击导入账单</a></br>
-                    <a href="/deleteAllbill">点击删除所有在线账单</a><span>注意!这个功能是删除所有账单数据!!!</span>
-                  <a href="/delbillExcel">点击删除账单Excel表格</a>
-
-              </div>
             </div>
-          </div>
-
         </div>
 
-
-      </div>
     </div>
 
-    <footer class="admin-content-footer">
-      <hr>
-      <p class="am-padding-left">© 2017 采微網版權所有.</p>
-    </footer>
 
-  </div>
-  <!-- content end -->
+</div>
+</div>
+
+<footer class="admin-content-footer">
+    <hr>
+    <p class="am-padding-left">© 2017 采微網版權所有.</p>
+</footer>
+
+</div>
+<!-- content end -->
 
 </div>
 
-<a href="#" class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu" data-am-offcanvas="{target: '#admin-offcanvas'}"></a>
+<a href="#" class="am-icon-btn am-icon-th-list am-show-sm-only admin-menu"
+   data-am-offcanvas="{target: '#admin-offcanvas'}"></a>
 
-{% include 'common/adminfooter.html' without context %}
+{% include 'common/adminfooter.html'  %}

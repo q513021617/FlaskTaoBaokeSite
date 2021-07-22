@@ -14,7 +14,7 @@ from flask_uploads import UploadSet, IMAGES,configure_uploads
 # from caiweiwang import app
 from model.excle2sql import excle2sql
 from common.decorator import login_required
-
+from service.goodsService import getAllGoodsToDBByTime
 set_mypic = UploadSet('mypic')
 # bootstrap = Bootstrap(app)
 # app.config['UPLOADED_MYPIC_DEST'] = './upload'
@@ -114,6 +114,33 @@ def singlegoods():
         goodsid = request.values.get('goodsid')
         goods = queryGoodByid(goodsid)
         return render_template('singlegoods.html', goods=goods)
+
+@goodsadmin.route('/batchGetGoods')
+@login_required()
+def batchGetGoods():
+    if request.method == 'GET':
+        getAllGoodsToDBByTime()
+        return {"status" : True,"data":{}}
+
+@goodsadmin.route('/searchgoodbyID', methods=['GET', 'POST'])
+def searchgoodbyID():
+    if request.method == 'POST':
+        goodsId = request.form['searchID']
+        print(goodsId)
+        rs = DBSession.query(Goods).filter(Goods.goodsId == goodsId).first()
+        if( rs!=None):
+            page = 1
+            goods = DBSession.query(Goods).filter(Goods.goodsId == goodsId)
+            count = DBSession.query(Goods).filter(Goods.goodsId == goodsId).count()
+            if not goods and page != 1:
+                abort(404)
+            pageination = Pagination(page, 1, count)
+
+            return render_template('searchgoods.html', goods=goods, pagination=pageination)
+        else:
+            erro = "没有找到商品,,请正确输入商品ID!!"
+
+            return render_template('show.html', info=erro)
 
 @goodsadmin.route('/searchgoods/', defaults={'page': 0}, methods=['GET', 'POST'])
 @goodsadmin.route('/searchgoods/page/<int:page>')

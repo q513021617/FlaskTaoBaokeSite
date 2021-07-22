@@ -1,11 +1,53 @@
-#logo,#search{
-	padding: 30px 0 30px 0;//padding边距
+#logo, #search {
+    padding: 30px 0 30px 0;
+/ / padding边距
 
 }
 
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 1200px;
+}
 
-#navigation{
-	border-bottom: 1px solid #009571;//自定义一个样式id,对其进行处理
+#Mcontent {
+    position: relative;
+}
+
+.board {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    height: 210px;
+    width: 500px;
+    margin: -75px 0 0 -250px;
+    padding: 20px;
+    font: 75px/75px Monoton, cursive;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 0 80px red, 0 0 30px FireBrick, 0 0 6px DarkRed;
+    color: red;
+    background-color: #0f0f0f;
+}
+
+#error {
+    color: #fff;
+    text-shadow: 0 0 80px #ffffff, 0 0 30px #008000, 0 0 6px #0000ff;
+}
+
+#banner img {
+    width: 100%;
+}
+
+#pagefooter {
+    position: relative;
+    bottom: 1px;
+}
+
+#navigation {
+    border-bottom: 1px solid #009571;
+/ / 自定义一个样式id, 对其进行处理
 
 }
 
@@ -31,6 +73,7 @@
 .showChar-3 i {
     background-position: 0 -80px;
 }
+
 .showChar-div i {
     display: block;
     width: 40px;
@@ -53,154 +96,177 @@
 .showChar-2 i {
     background-position: 0 -40px;
 }
+
 .showChar-1 i {
     background-position: 0 0;
 }
+
 /*主体内容的样式*/
-.content-box{
+.content-box {
 
-	border:1px solid #d7d7d7;
-	border-top: none;
-	padding: 10px;
-}
-.content-box h1{
-	font-size: 15px;
-	line-height: 30px;
-	margin-top: 0;
-}
-.content-meta span,.content-meta time{
-	margin-right: 10px;
-	color: #828282;
-
-}
-.content-meta img{
-	width: 32px;
-}
-#main-content{
-	margin: 20px 0;
+    border: 1px solid #d7d7d7;
+    border-top: none;
+    padding: 10px;
 }
 
-#banner .banner_con{
-	width: 1200px;
-	height: 310px;
-	margin: auto;
+.content-box h1 {
+    font-size: 15px;
+    line-height: 30px;
+    margin-top: 0;
 }
-#banner .clearfix{
-	clear: both;
-}
-#banner .list{
-	width: 140px;
-	height: 309px;
-	padding: 30px;
-	border:1px solid #E5E5E5;
-}
-.fl{
-	float: left;
-}
-.fr{
-	float: right;
-}
-#banner .rightPic{
-	width: 258px;
-	height: 298px;
-	margin-top: 10px;
-	border:1px solid #E5E5E5;
-	background-color: #fff;
-	overflow: hidden;
-}
-.banner{
-	position: relative;
-	overflow: auto;
-	text-align: center;
-}
-ul,li {  
-    list-style:none;  
-} 
-.csslider{
 
-	width:800px;   
-    margin:0 auto;   
-    padding-bottom:50px;  
+.content-meta span, .content-meta time {
+    margin-right: 10px;
+    color: #828282;
+
 }
-#focus {  
-    height:280px;   
-    width:800px;  
-    overflow:hidden;  
-    position:relative;  
-}  
-#focus ul {  
-    position:absolute;  
-}  
-#focus ul li {  
-    float:left;   
-    width:800px;   
-    height:280px;   
-    background:#000;  
+
+.content-meta img {
+    width: 32px;
+}
+
+#main-content {
+    margin: 20px 0;
+}
+
+#banner .banner_con {
+    width: 1200px;
+    height: 310px;
+    margin: auto;
+}
+
+#banner .clearfix {
+    clear: both;
+}
+
+#banner .list {
+    width: 140px;
+    height: 309px;
+    padding: 30px;
+    border: 1px solid #E5E5E5;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+#banner .rightPic {
+    width: 258px;
+    height: 298px;
+    margin-top: 10px;
+    border: 1px solid #E5E5E5;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.banner {
+    position: relative;
+    overflow: auto;
+    text-align: center;
+}
+
+ul, li {
+    list-style: none;
+}
+
+.csslider {
+
+    width: 800px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+#focus {
+    height: 280px;
+    width: 800px;
+    overflow: hidden;
+    position: relative;
+}
+
+#focus ul {
+    position: absolute;
+}
+
+#focus ul li {
+    float: left;
+    width: 800px;
+    height: 280px;
+    background: #000;
 }
 
 /*提供手动切换图片的效果*/
 /*div.btn为下方横幅，为半透明；div.btn span为小方框*/
-#focus div.btn {  
-    position:absolute;   
-    width:800px;   
-    height:10px;   
-    padding:5px 10px;  
-    right:0;   
-    bottom:0;   
-    text-align:right;  
-    background:#000;  
-    opacity:0.5;  
-    filter:alpha(opacity=50);  
-}  
-#focus div.btn span {  
-    display:inline-block;   
-    width:25px;   
-    height:10px;   
-    margin-left:5px;   
-    cursor:pointer;   
-    background:#fff;  
-    border:1px solid #A020F0;  
-}  
+#focus div.btn {
+    position: absolute;
+    width: 800px;
+    height: 10px;
+    padding: 5px 10px;
+    right: 0;
+    bottom: 0;
+    text-align: right;
+    background: #000;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+#focus div.btn span {
+    display: inline-block;
+    width: 25px;
+    height: 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #A020F0;
+}
 
 
 /*1.4点击图片左半部分、右半部分出现的箭头指示，切换上下张图片的效果样式*/
-#focus div.preNext {  
-    width:45px;   
-    height:100px;   
-    position:absolute;   
-    top:90px;   
-    background-image:url(../images/sprite.png);   
-    background-repeat:no-repeat;  
-    opacity:0;  
-    filter:alpha(opacity=0);  
-    cursor:pointer;  
-}  
-#focus div.pre {  
-    left:0;  
-    background-position:left top;  
-}  
-#focus div.next {  
-    right:0;   
-    background-position:right top;  
-}  
-#focus span.hidden {  
-    display:block;  
-    width:400px;  
-    height:260px;  
-    background:#000;  
-    opacity:0;  
-    filter:alpha(opacity=0);  
-    position:absolute;  
-    cursor:pointer;  
-}  
-#focus span.left {  
-    top:0;  
-    left:0;  
-}  
-#focus span.right {  
-    top:0;  
-    right:0;  
-}  
+#focus div.preNext {
+    width: 45px;
+    height: 100px;
+    position: absolute;
+    top: 90px;
+    background-image: url(../images/sprite.png);
+    background-repeat: no-repeat;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+}
+
+#focus div.pre {
+    left: 0;
+    background-position: left top;
+}
+
+#focus div.next {
+    right: 0;
+    background-position: right top;
+}
+
+#focus span.hidden {
+    display: block;
+    width: 400px;
+    height: 260px;
+    background: #000;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    position: absolute;
+    cursor: pointer;
+}
+
+#focus span.left {
+    top: 0;
+    left: 0;
+}
+
+#focus span.right {
+    top: 0;
+    right: 0;
+}
 
 .Ctitle {
     height: 24px;
@@ -214,6 +280,7 @@ ul,li {
 .discount_head {
     border-color: #FF6C00;
 }
+
 .dishead_left h1 {
     display: inline-block;
     font-size: 20px;
@@ -229,11 +296,13 @@ ul,li {
     width: 400px;
     height: 100%;
 }
+
 #Mcontent .Ctitle .dishead_right {
     width: auto;
     height: 100%;
     font-size: 16px;
 }
+
 .cat-wrap {
     position: relative;
     width: 1198px;
@@ -249,16 +318,19 @@ ul,li {
     width: 1200px;
     margin: 20px auto 0;
 }
+
 .cat-wrap .cat-list {
     background: #f9f9f9;
     display: block;
     border-bottom: #eee 1px solid;
 }
+
 .cat-wrap .cat-list {
     background: #f9f9f9;
     display: block;
     border-bottom: #eee 1px solid;
 }
+
 .cat-wrap .cat-list .cat-lit-title {
     float: left;
     width: 100px;
@@ -266,6 +338,7 @@ ul,li {
     color: #999;
     text-align: center;
 }
+
 .cat-wrap .cat-list ul {
     background: white;
     list-style: none;
@@ -275,11 +348,13 @@ ul,li {
     line-height: 30px;
     width: 1068px;
 }
+
 .cat-wrap .cat-list ul li {
     list-style: none;
     float: left;
     margin-right: 22px;
 }
+
 .tag-wrap {
     height: 38px;
     border-bottom: 1px solid #eee;
@@ -292,6 +367,7 @@ ul,li {
     top: -1px;
     max-width: 1108px;
 }
+
 .goods-pages-page {
     text-align: center;
     position: absolute;
@@ -310,6 +386,7 @@ ul,li {
     color: #666;
     position: relative;
 }
+
 .right-pic-cate {
     position: relative;
     width: 100%;
@@ -317,6 +394,7 @@ ul,li {
     border-bottom: 1px solid #E5E5E5;
     background: url(../images/right-pic.png) no-repeat center center;
 }
+
 .right-pic-cate .bdshare {
     position: absolute;
     top: 125px;
@@ -324,7 +402,8 @@ ul,li {
     width: 130px;
     margin-left: -65px;
 }
-#Mcontent #good p{
+
+#Mcontent #good p {
     float: left;
     width: 249px;
     text-overflow: ellipsis;
@@ -332,7 +411,7 @@ ul,li {
     overflow: hidden;
 }
 
-body .header #search{
+body .header #search {
 
     position: relative;
     top: 30px;
@@ -349,6 +428,7 @@ body .header #search input {
 
 
 }
+
 body .header #search button {
 
 
@@ -358,13 +438,15 @@ body .header #search button {
     background: url(../images/search-btn.png) no-repeat center center #FF6C00;
     cursor: pointer;
 }
-body .header #buttonLogin{
+
+body .header #buttonLogin {
 
     position: relative;
     left: 160px;
 }
-body .row #row1font{
-    position:relative;
-    top:20px;
+
+body .row #row1font {
+    position: relative;
+    top: 20px;
     size: 32px;
 }

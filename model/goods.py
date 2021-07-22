@@ -1,8 +1,9 @@
 # -*- coding:utf-8 -*-
 from werkzeug.security import generate_password_hash, check_password_hash
+from sqlalchemy import Column, String, Integer, create_engine,text,and_
 from sqlalchemy import Column, Integer, String,and_,Float
 from model.tools import Base, DBSession
-
+from sqlalchemy.orm import sessionmaker, scoped_session, session
 class Goods(Base):
     __tablename__ = 'goods'
     goodsId = Column(String(64), primary_key=True)
@@ -13,6 +14,7 @@ class Goods(Base):
     TaokLink = Column(String(64))
     goodPri = Column(String(128))
     shopCount = Column(String(64))
+    # 佣金比例
     CTI = Column(Float(24))
     Commission = Column(String(64))
     dianzhuWW = Column(String(128))
@@ -64,14 +66,25 @@ def queryGoodsByType(GoodCla):
     return goods
 
 
-def addgoods1(goodsid, goodsname, goodsimage, goodsCla, goodsPri, CTI, goodsImAdr):
+def addgoods1(goodsid, goodsname, goodsimage, goodsCla, goodsPri, CTI, goodsImAdr,CouponLink,TaokLink,shopCount,couponCount):
     # 创建新User对象:
-    new_goods = Goods(goodsId=goodsid, goodsName=goodsname, goodsimage=goodsimage, goodPri=goodsPri, goodsCla=goodsCla,CTI=CTI,goodsImAdr=goodsImAdr)
+    new_goods = Goods(goodsId=goodsid, goodsName=goodsname, goodsimage=goodsimage, goodPri=goodsPri, goodsCla=goodsCla,CTI=CTI,goodsImAdr=goodsImAdr,
+                      CouponLink=CouponLink,CouponTKLink=CouponLink,TaokLink=TaokLink,shopCount=shopCount,couponCount=couponCount)
     # 添加到session:
     DBSession.add(new_goods)
     # 提交即保存到数据库:
     DBSession.commit()
 
+def addgoods(goodsid, goodsname, goodsimage, goodsCla, goodsPri, CTI, goodsImAdr,CouponLink,TaokLink,shopCount,couponCount):
+    engine = create_engine('mysql+pymysql://root:root@localhost:3306/caiweiwang?charset=utf8')
+    DBSession = scoped_session(sessionmaker(bind=engine))
+    # 创建新User对象:
+    new_goods = Goods(goodsId=goodsid, goodsName=goodsname, goodsimage=goodsimage, goodPri=goodsPri, goodsCla=goodsCla,CTI=CTI,goodsImAdr=goodsImAdr,
+                      CouponLink=CouponLink,CouponTKLink=CouponLink,TaokLink=TaokLink,shopCount=shopCount,couponCount=couponCount)
+    # 添加到session:
+    DBSession.add(new_goods)
+    # 提交即保存到数据库:
+    DBSession.commit()
 def count2():
     count = DBSession.count()
 
